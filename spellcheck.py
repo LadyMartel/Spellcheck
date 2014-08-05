@@ -117,7 +117,7 @@ if __name__ == "__main__":
 
 	print "enter word below:"
 	print "press ':q' to exit"
-	print "type RAND to randomly generate 1000 misspelled words."
+	print "type RAND to randomly generate many misspelled words."
 	while True:
 		word_input = raw_input("> ")
 		if( word_input == ':q'):
@@ -133,6 +133,7 @@ if __name__ == "__main__":
 			for i in range(num):
 				w = wordgenerator()
 				ret = sc.get_suggestion(w)
+				print "word: " + w + "suggestion: " + ret
 				assert(ret != 'NO SUGGESTION'), "word %s failed" % ret
 			print "all generated words had suggestions."
 		else:
